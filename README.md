@@ -16,4 +16,4 @@ npm run start
 
 ## mobile app
 npm install
-npx expo start
+npx expo start# game-app
