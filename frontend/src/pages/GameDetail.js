@@ -24,7 +24,7 @@ const GameDetail = () => {
   });
 
   const { data, loading, error } = useFetch(
-    "http://localhost:3000/games/" + id
+    "https://game-app-1.onrender.com/games/" + id
   );
 
   const {
@@ -32,7 +32,7 @@ const GameDetail = () => {
     loading: reviewLoading,
     error: reviewError,
     refresh,
-  } = useFetch("http://localhost:3000/reviews/game/" + id);
+  } = useFetch("https://game-app-1.onrender.com/reviews/game/" + id);
 
   useEffect(() => {}, []);
 

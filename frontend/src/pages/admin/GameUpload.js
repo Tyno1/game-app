@@ -43,7 +43,7 @@ const GameUpload = () => {
 
     if (payload) {
       axios
-        .post("http://localhost:3000/games", payload, {
+        .post("https://game-app-1.onrender.com/games", payload, {
           headers: { Authorization: user?.token },
         })
         .then((res) => {

@@ -7,7 +7,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 const GamesModerator = () => {
   const { data, loading, error, refresh } = useFetch(
-    "http://localhost:3000/games/all"
+    "https://game-app-1.onrender.com/games/all"
   );
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const GamesModerator = () => {
   const handleDeleteGames = (gameId) => {
     return new Promise((resolve, reject) => {
       axios
-        .delete(`http://localhost:3000/games/${gameId}`, {
+        .delete(`https://game-app-1.onrender.com/games/${gameId}`, {
           headers: { Authorization: user?.token },
         })
         .then((res) => {

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
 const Games = () => {
-  const { data, loading, error } = useFetch("http://localhost:3000/games/all");
+  const { data, loading, error } = useFetch("https://game-app-1.onrender.com/games/all");
   const navigate = useNavigate();
   return (
     <div className="catalogue">
