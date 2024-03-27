@@ -10,7 +10,7 @@ const Games = () => {
   const navigate = useNavigate();
   return (
     <div className="catalogue">
-      <div className="game-container w-full min-h-[100vh] bg-stone-950 pt-12 md:pt-20">
+      <div className="game-container w-full min-h-[100vh] bg-black pt-12 md:pt-20">
         <div className="inner-container-1 m-10">
           <h2 className="font-bold text-4xl text-stone-100">Game Catalogue</h2>
           <p className="text-stone-100 mt-2">
@@ -25,7 +25,7 @@ const Games = () => {
             data.map((game) => (
               <div
                 key={game._id}
-                className="bg-stone-800 w-full p-4 flex gap-8 items-center justify-center rounded-xl"
+                className="bg-stone-950 w-full p-4 flex gap-8 items-center justify-center rounded-xl"
               >
                 <div className="image-container hidden md:flex w-28 h-full rounded-lg">
                   <img

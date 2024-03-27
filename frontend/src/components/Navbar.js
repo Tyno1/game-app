@@ -70,7 +70,7 @@ export default function Navbar() {
           </button>
 
           {isOpen && (
-            <div className="drop-down absolute top-20 right-0 z-50 w-72 bg-gray-950 px-5 py-2 rounded-sm shadow-2xl">
+            <div className="drop-down absolute top-20 right-0 z-50 w-72 bg-stone-950 px-5 py-2 rounded-sm shadow-2xl">
               <ul className="links flex flex-col">
                 <li className="pt-2 pb-4 border-solid mb-2 border-b-2 border-gray-800 ">
                   <Link to="/">Home</Link>
@@ -93,7 +93,7 @@ export default function Navbar() {
             <CgProfile size="2rem" />
           </button>
           {loginOpen && (
-            <div className="drop-down bg-gray-950 px-5 py-6 rounded-xl shadow-lg absolute top-20 right-0 z-50 w-56">
+            <div className="drop-down bg-stone-950 px-5 py-6 rounded-xl shadow-lg absolute top-20 right-0 z-50 w-56">
               {user ? (
                 <ul>
                   <li className="pb-2 border-solid border-b-2 border-gray-900 ">
@@ -141,7 +141,7 @@ export default function Navbar() {
             <CgProfile size="2rem" />
           </button>
           {mobileOpen && (
-            <div className="drop-down bg-gray-950 px-5 py-6 rounded-xl shadow-lg absolute top-16 right-0 z-50 w-56">
+            <div className="drop-down bg-stone-950 px-5 py-6 rounded-xl shadow-lg absolute top-16 right-0 z-50 w-56">
               {user ? (
                 <ul>
                   <li className="pb-2 border-solid border-b-2 border-gray-900 ">
