@@ -70,7 +70,7 @@ export default function Navbar() {
           </button>
 
           {isOpen && (
-            <div className="drop-down absolute top-20 right-0 z-50 w-72 bg-stone-950 px-5 py-2 rounded-sm shadow-2xl">
+            <div className="drop-down absolute top-20 right-0 z-50 w-56 bg-stone-950 px-5 py-2 rounded-sm shadow-2xl">
               <ul className="links flex flex-col">
                 <li className="pt-2 pb-4 border-solid mb-2 border-b-2 border-gray-800 ">
                   <Link to="/">Home</Link>
