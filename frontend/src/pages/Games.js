@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
 const Games = () => {
-  const { data, loading, error } = useFetch("https://game-app-1.onrender.com/games/all");
+  const { data, loading, error } = useFetch(
+    "https://game-app-1.onrender.com/games/all"
+  );
   const navigate = useNavigate();
   return (
     <div className="catalogue">
@@ -38,11 +40,14 @@ const Games = () => {
                       {game?.name}
                     </p>
                     <p className="text-stone-100 leading-[3rem]">
-                      Available on:
+                      <span className="hidden md:flex">Available on:</span>
                       <span className="">
                         {game.gamePlatform &&
                           game.gamePlatform.map((platform) => (
-                            <span id={platform.index} className="border p-2 rounded-lg border-amber-500 mx-2">
+                            <span
+                              id={platform.index}
+                              className="border p-2 rounded-lg border-amber-500 mx-2"
+                            >
                               {platform}
                             </span>
                           ))}
@@ -54,9 +59,9 @@ const Games = () => {
                     <p className="text-stone-100 font-bold text-md">Ratings:</p>
                     <p className="item-info text-sm text-amber-500 flex pt-1 pb-2">
                       {game?.rating > 0
-                        ? Array.from({ length: game.rating }).map((_, index) => (
-                            <IoMdStar key={index} size={20} />
-                          ))
+                        ? Array.from({ length: game.rating }).map(
+                            (_, index) => <IoMdStar key={index} size={20} />
+                          )
                         : "N/A"}
                     </p>
                   </div>
