@@ -17,7 +17,7 @@ export default function HomeScreen () {
   const router = useRouter();
   const [selectedGame, setSelectedGame] = useState();
 
-  const { data, loading, error } = useFetch("http://localhost:3000/games/all");
+  const { data, loading, error } = useFetch("https://game-app-1.onrender.com/games/all");
 
   const navigate = (link, id) => {
     router.push({ pathname: link, params: { id } });
@@ -41,6 +41,7 @@ export default function HomeScreen () {
               handleCardPress={handleCardPress}
               selectedGame={selectedGame}
               item={item}
+              keyExtractor={index}
             />
           )}
           keyExtractor={(item) => item?._id}

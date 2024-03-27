@@ -40,7 +40,9 @@ const Games = () => {
                       {game?.name}
                     </p>
                     <p className="text-stone-100 text-[10px] md:text-sm leading-[3rem]">
-                      <span className="hidden md:flex">Available on:</span>
+                      <span className="hidden md:flex leading-[3rem]">
+                        Available on:
+                      </span>
                       <span className="">
                         {game.gamePlatform &&
                           game.gamePlatform.map((platform) => (

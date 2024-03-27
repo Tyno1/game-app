@@ -47,7 +47,6 @@ const GameUpload = () => {
           headers: { Authorization: user?.token },
         })
         .then((res) => {
-          console.log(res);
           navigate("/admin/games-mod");
         })
         .catch((error) => {

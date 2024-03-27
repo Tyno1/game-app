@@ -17,7 +17,7 @@ import Reviews from "../../../components/Reviews";
 const GamesDetails = () => {
   const { id } = useGlobalSearchParams();
   const { data, loading, error } = useFetch(
-    "http://localhost:3000/games/" + id
+    "https://game-app-1.onrender.com/games/" + id
   );
 
   const [expanded, setExpanded] = useState(false);

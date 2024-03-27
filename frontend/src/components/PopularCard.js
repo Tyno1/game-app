@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import cardImg1 from "../images/314472.jpg";
 import cardImg2 from "../images/1287842.jpg";
 import cardImg3 from "../images/3524453-horizonforbiddenwest_20230426135735.jpg";
@@ -7,15 +7,19 @@ import cardImg5 from "../images/702786-assassins-creed-3-wallpaper-1920x1080-for
 import cardImg6 from "../images/Grand_Theft_Auto_V.png";
 import { IoMdStar } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthContext";
+
 
 const PopularCard = () => {
+  const {user} = useContext(AuthContext);
+
   return (
     <div className="popular-card h-[80vh] w-full bg-black mt-10 p-8 flex flex-col items-center">
       <h2 className="text-stone-100 text-3xl font-bold mb-6">Popular Games</h2>
       <div className="container h-[600px] w-full flex gap-4 mx-auto overflow-x-scroll whitespace-nowrap">
         {/* item 1 */}
         <div className="item-container h-[500px] w-[300px]">
-          <Link to="/games">
+          <Link to={user ? "/games" : "/login"}>
             <div className="img-cont h-[60%] w-full">
               <img
                 className="w-full h-full object-cover object-center"
@@ -43,7 +47,7 @@ const PopularCard = () => {
         </div>
         {/* item 2 */}
         <div className="item-container h-[500px] w-[300px]">
-          <Link to="/games">
+          <Link to={user ? "/games" : "/login"}>
             <div className="img-cont h-[60%] w-full">
               <img
                 className="w-full h-full object-cover object-center"
@@ -70,7 +74,7 @@ const PopularCard = () => {
         </div>
         {/* item 3 */}
         <div className="item-container h-[500px] w-[300px]">
-          <Link to="/games">
+          <Link to={user ? "/games" : "/login"}>
             <div className="img-cont h-[60%] w-full">
               <img
                 className="w-full h-full object-cover object-center"
@@ -97,7 +101,7 @@ const PopularCard = () => {
         </div>
         {/* item 4 */}
         <div className="item-container h-[500px] w-[300px]">
-          <Link to="/games">
+          <Link to={user ? "/games" : "/login"}>
             <div className="img-cont h-[60%] w-full">
               <img
                 className="w-full h-full object-cover object-center"
@@ -124,7 +128,7 @@ const PopularCard = () => {
         </div>
         {/* item 5 */}
         <div className="item-container h-[500px] w-[300px]">
-          <Link to="/games">
+          <Link to={user ? "/games" : "/login"}>
             <div className="img-cont h-[60%] w-full">
               <img
                 className="w-full h-full object-cover object-center"
@@ -151,7 +155,7 @@ const PopularCard = () => {
         </div>
         {/* item 6 */}
         <div className="item-container h-[500px] w-[300px]">
-          <Link to="/games">
+          <Link to={user ? "/games" : "/login"}>
             <div className="img-cont h-[60%] w-full">
               <img
                 className="w-full h-full object-cover object-center"

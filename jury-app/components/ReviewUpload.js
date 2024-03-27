@@ -32,7 +32,7 @@ const ReviewUpload = ({ address, sendReview, user, id, refresh, coords }) => {
       ...payload,
       rating,
       location: {
-        address: `${address.address.city}, ${address.address.country}`,
+        address: `${address.address.suburb ? address.address.suburb : address.address.city}, ${address.address.country}`,
         latitude: JSON.stringify(coords[0]) ,
         longitude: JSON.stringify(coords[1]),
       },

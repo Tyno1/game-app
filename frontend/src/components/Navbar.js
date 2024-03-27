@@ -88,11 +88,11 @@ export default function Navbar() {
             </div>
           )}
         </div>
-        <div className="profile" ref={loginRef}>
-          <button onClick={() => setLoginOpen(!loginOpen)}>
+        <div className="profile" ref={mobileRef}>
+          <button onClick={() => setMobileOpen(!mobileOpen)}>
             <CgProfile size="2rem" />
           </button>
-          {loginOpen && (
+          {mobileOpen && (
             <div className="drop-down bg-stone-950 px-5 py-6 rounded-xl shadow-lg absolute top-20 right-0 z-50 w-56">
               {user ? (
                 <ul>
@@ -136,11 +136,11 @@ export default function Navbar() {
         <li className="pr-8 ">
           <Link to="/contact">Contact Us</Link>
         </li>
-        <li className="profile pr-8" ref={mobileRef}>
+        <li className="profile pr-8" ref={loginRef}>
           <button onClick={() => setLoginOpen(!loginOpen)}>
             <CgProfile size="2rem" />
           </button>
-          {mobileOpen && (
+          {loginOpen && (
             <div className="drop-down bg-stone-950 px-5 py-6 rounded-xl shadow-lg absolute top-16 right-0 z-50 w-56">
               {user ? (
                 <ul>

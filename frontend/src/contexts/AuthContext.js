@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
 import { decodeToken } from "react-jwt";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext();
 
@@ -21,7 +22,6 @@ export const AuthProvider = ({ children }) => {
         .then((res) => {
           // resolve(res);
           const decoded = decodeToken(res.data.token);
-          console.log(res.data, decoded);
           setDecodedToken(decoded);
           localStorage.setItem("user", JSON.stringify(res.data));
           setUser(res.data);
@@ -33,7 +33,14 @@ export const AuthProvider = ({ children }) => {
           }
         })
         .catch((err) => {
-          reject(err);
+          if (err.response && err.response.status === 401) {
+            // Unauthorized error, handle it
+            reject("Invalid email or password"); // Reject with custom error message
+            toast.error("Invalid email or password", { hideProgressBar: true });
+          } else {
+            // Other error, reject with the actual error
+            reject(err);
+          }
         });
     });
   };

@@ -18,7 +18,7 @@ const ReviewsCard = ({ review }) => {
         <View style={styles.ratingInfo}>
           <View style={styles.ratingBox}>
             {[...Array(review.rating)].map((_, index) => (
-              <AntDesign name="star" size={24} color="black" />
+              <AntDesign name="star" size={10} color="black" />
             ))}
           </View>
           <View style={styles.userLocation}>
@@ -83,10 +83,12 @@ const styles = StyleSheet.create({
     maxHeight: SIZES.xxLarge + 2,
   },
   ratingBox: {
+    width: "100%",
     height: "100%",
     backgroundColor: COLORS.primary,
     flex: 2,
-    padding: 4,
+    padding: 10,
+    paddingHorizontal: 30,
     borderRadius: SIZES.medium,
     display: "flex",
     flexDirection: "row",
