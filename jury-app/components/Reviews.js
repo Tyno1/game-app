@@ -22,7 +22,7 @@ const Reviews = ({ id, scrollToBottom }) => {
     loading,
     error,
     refresh,
-  } = useFetch("http://localhost:3000/reviews/game/" + id);
+  } = useFetch("https://game-app-1.onrender.com/reviews/game/" + id);
 
   const { address, location } = useContext(LocationContext);
   const { sendReview } = useContext(ReviewContext);

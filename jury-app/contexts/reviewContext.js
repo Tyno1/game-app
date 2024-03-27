@@ -13,7 +13,7 @@ export const ReviewProvider = ({ children }) => {
   const sendReview = (payload) => {
     return new Promise((resolve, reject) => {
       axios
-        .post("http://localhost:3000/reviews", payload)
+        .post("https://game-app-1.onrender.com/reviews", payload)
         .then((res) => {
           resolve(res);
           setPostResp(res.data);
@@ -27,7 +27,7 @@ export const ReviewProvider = ({ children }) => {
   const getReview = () => {
     return new Promise((resolve, reject) => {
       axios
-        .get("http://localhost:3000/reviews/all")
+        .get("https://game-app-1.onrender.com/reviews/all")
         .then((res) => {
           resolve(res);
           setReviews(res.data);
