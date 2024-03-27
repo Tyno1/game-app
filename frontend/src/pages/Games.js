@@ -39,14 +39,14 @@ const Games = () => {
                     <p className="text-stone-100 font-bold text-2xl overflow-hidden text-ellipsis whitespace-wrap">
                       {game?.name}
                     </p>
-                    <p className="text-stone-100 leading-[3rem]">
+                    <p className="text-stone-100 text-[10px] md:text-sm leading-[3rem]">
                       <span className="hidden md:flex">Available on:</span>
                       <span className="">
                         {game.gamePlatform &&
                           game.gamePlatform.map((platform) => (
                             <span
                               id={platform.index}
-                              className="border p-2 rounded-lg border-amber-500 mx-2"
+                              className="border p-2 rounded-lg border-amber-500 mr-1"
                             >
                               {platform}
                             </span>
