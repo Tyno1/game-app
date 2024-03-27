@@ -44,7 +44,7 @@ const Login = () => {
         className="bg-container w-full h-full pt-6 md:pt-20"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.7 )" }}
       >
-        <div className="container flex mx-auto mt-40 md:mt-20 bg-white h-[500px] w-full md:w-[70%] rounded-xl">
+        <div className="container flex mx-auto mt-40 md:mt-20 bg-white min-h-[300px] w-full md:w-[70%] rounded-xl">
           <div className="left-section w-[45%] h-full hidden md:flex">
             <img
               className="object-fit object-cover w-full h-full"
@@ -52,10 +52,10 @@ const Login = () => {
               alt=""
             />
           </div>
-          <div className="right-section w-[55%] flex-1 bg-gray-100 p-8 flex flex-col gap-8 items-center h-full">
+          <div className="right-section w-[55%] flex-1 bg-gray-100 p-8 flex flex-col gap-8 items-center my-auto h-[100%]">
             <h2 className="font-bold text-4xl">Login</h2>
             <form
-              className="flex flex-col items-end gap-4 w-full"
+              className="flex flex-col items-end gap-4 h-full w-full"
               onSubmit={handleLogin}
             >
               <div className="email-section flex items-center gap-2 w-full">
