@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const [payload, setPayload] = useState({email:"", password:""})
+  const [payload, setPayload] = useState({ email: "", password: "" });
   const [res, setRes] = useState(null);
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -17,11 +17,10 @@ const Login = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   };
- 
 
   const handleChange = (e) => {
-    setPayload({...payload, [e.target.name]: e.target.value });
-  }
+    setPayload({ ...payload, [e.target.name]: e.target.value });
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -45,7 +44,7 @@ const Login = () => {
         className="bg-container w-full h-full pt-6 md:pt-20"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.7 )" }}
       >
-        <div className="container flex mx-auto mt-40 md:mt-20 bg-white h-[500px] w-[70%] rounded-xl">
+        <div className="container flex mx-auto mt-40 md:mt-20 bg-white h-[500px] w-full md:w-[70%] rounded-xl">
           <div className="left-section w-[45%] h-full hidden md:flex">
             <img
               className="object-fit object-cover w-full h-full"
