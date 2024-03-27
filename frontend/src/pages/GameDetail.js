@@ -83,16 +83,16 @@ const GameDetail = () => {
       {loading && <div> ...loadiing</div>}
       {error && <div> {error}</div>}
       {data && (
-        <div className="w-full min-h-[100vh] bg-stone-950 pt-6 md:pt-20 flex flex-col">
+        <div className="w-full min-h-[100vh] bg-stone-950 pt-14 md:pt-20 flex flex-col">
           <div className="game-details p-8 flex flex-row gap-10 h-full w-full">
-            <div className="image-container w-[30%] h-[500px]">
+            <div className="image-container hidden md:flex w-[30%] h-[500px]">
               <img
                 className="w-full h-full object-fit object-cover"
                 src={data?.imageUrl}
                 alt="game image"
               />
             </div>
-            <div className="text-container w-[70%] flex flex-col gap-6">
+            <div className="text-container w-[70%] flex-1 flex flex-col gap-6">
               <h2 className="game-name text-stone-100 font-bold text-6xl overflow-hidden text-ellipsis whitespace-wrap">
                 {data.name}
               </h2>
@@ -120,7 +120,7 @@ const GameDetail = () => {
                 </p>
               </div>
 
-              <div className="about text-stone-100 pt-6">
+              <div className="about text-stone-100 pt-6 text-justify">
                 {data.description}
               </div>
             </div>
@@ -147,7 +147,7 @@ const GameDetail = () => {
 
           <div className="add-review p-8">
             <form
-              className="w-[80%] items-center mx-auto flex flex-col p-10 gap-8"
+              className="w-full md:w-[80%] items-center mx-auto flex flex-col p-10 gap-8"
               onSubmit={handlePostReview}
             >
               <div className="rating w-full flex flex-col gap-4">
@@ -161,7 +161,7 @@ const GameDetail = () => {
                 />
               </div>
 
-              <div className="flex flex-row items-end w-full">
+              <div className="flex flex-col md:flex-row items-end w-full gap-4">
                 <div className="rating w-full flex flex-col gap-4">
                   <label className="text-stone-100 text-2xl">Rating</label>
                   <select

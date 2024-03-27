@@ -13,7 +13,7 @@ export default function Footer() {
 
           <Link
             className="inline-flex items-center gap-2 rounded-full border border-white bg-stone-50 px-8 py-2 text-stone-900 hover:bg-transparent hover:text-white focus:outline-none active:bg-white/90 active:text-teal-600"
-            to="/"
+            to="/contact"
           >
             <span className="text-sm font-medium"> Let's Get Started</span>
             <MdOutlineArrowRightAlt size={35} />

@@ -58,21 +58,21 @@ const Register = () => {
   };
 
   return (
-    <div className="pt-6 md:pt-20 h-[100vh] w-full" style={bgStyle}>
+    <div className="min-h-[100vh] w-full" style={bgStyle}>
       <div
-        className="bg-container w-full h-full"
+        className="bg-container w-full h-full pt-6 md:pt-20"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.7 )" }}
       >
-        <div className="container flex mx-auto mt-20 bg-white h-[500px] w-[70%] rounded-xl">
-          <div className="left-section w-[55%]"></div>
-          <div className="right-section w-[45%] bg-gray-100 p-8 flex flex-col gap-8 items-center h-full">
+        <div className="container flex mx-auto mt-20 bg-white min-h-[500px] w-[70%] rounded-xl">
+          <div className="left-section hidden md:flex w-[45%]"></div>
+          <div className="right-section w-[55%] flex-1 bg-gray-100 p-8 flex flex-col gap-8 items-center h-full">
             <h2 className="font-bold text-4xl">Register</h2>
             <form
-              className="flex flex-col items-end gap-4"
+              className="flex flex-col items-start gap-4 w-full"
               onSubmit={handleRegister}
             >
-              <div className="Name-section flex items-center gap-2">
-                <div>
+              <div className="Name-section flex items-center gap-2 flex-wrap w-full">
+                <div className="w-full">
                   <label className="text-lg" htmlFor="">
                     Fisrt Name
                   </label>
@@ -80,13 +80,13 @@ const Register = () => {
                     name="firstName"
                     onChange={handleChange}
                     value={payload.firstName}
-                    className="p-3 rounded-lg"
+                    className="p-3 rounded-lg w-full"
                     type="text"
                     placeholder="Joe"
                   />
                 </div>
 
-                <div>
+                <div className="w-full">
                   <label className="text-lg" htmlFor="">
                     Last Name
                   </label>
@@ -94,14 +94,14 @@ const Register = () => {
                     name="lastName"
                     onChange={handleChange}
                     value={payload.lastName}
-                    className="p-3 rounded-lg"
+                    className="p-3 rounded-lg w-full"
                     type="text"
                     placeholder="Godons"
                   />
                 </div>
               </div>
 
-              <div className="userName-section flex items-center gap-2 w-full">
+              <div className="userName-section flex items-center gap-2 w-full flex-wrap">
                 <label className="text-lg" htmlFor="">
                   Username
                 </label>
@@ -109,13 +109,13 @@ const Register = () => {
                   name="username"
                   onChange={handleChange}
                   value={payload.username}
-                  className="p-3 rounded-lg"
+                  className="p-3 rounded-lg w-full"
                   type="text"
                   placeholder="GoJoe203"
                 />
               </div>
 
-              <div className="email-section flex items-center gap-2 w-full">
+              <div className="email-section flex items-center gap-2 w-full flex-wrap">
                 <label className="text-lg" htmlFor="">
                   Email
                 </label>
@@ -129,8 +129,8 @@ const Register = () => {
                 />
               </div>
 
-              <div className="password-section flex items-center gap-2 w-full">
-                <div className="1st-pass">
+              <div className="password-section flex items-center gap-2 w-full flex-wrap">
+                <div className="1st-pass w-full">
                   <label htmlFor="">Password</label>
                   <input
                     name="password"
@@ -141,7 +141,7 @@ const Register = () => {
                     placeholder="*********"
                   />
                 </div>
-                <div className="2nd-pass">
+                <div className="2nd-pass w-full">
                   <label htmlFor="">Confirm Password</label>
                   <input
                     name="password"

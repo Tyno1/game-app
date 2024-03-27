@@ -35,26 +35,25 @@ const Login = () => {
         })
         .catch((error) => {
           toast.error(error.message, { hideProgressBar: true });
-          console.error(error);
         });
     }
   };
 
   return (
-    <div className="pt-6 md:pt-20 h-[100vh] w-full" style={bgStyle}>
+    <div className=" h-[100vh] w-full" style={bgStyle}>
       <div
-        className="bg-container w-full h-full"
+        className="bg-container w-full h-full pt-6 md:pt-20"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.7 )" }}
       >
-        <div className="container flex mx-auto mt-20 bg-white h-[500px] w-[70%] rounded-xl">
-          <div className="left-section w-[45%] h-full">
+        <div className="container flex mx-auto mt-40 md:mt-20 bg-white h-[500px] w-[70%] rounded-xl">
+          <div className="left-section w-[45%] h-full hidden md:flex">
             <img
               className="object-fit object-cover w-full h-full"
               src={LoginImg}
               alt=""
             />
           </div>
-          <div className="right-section w-[55%] bg-gray-100 p-8 flex flex-col gap-8 items-center h-full">
+          <div className="right-section w-[55%] flex-1 bg-gray-100 p-8 flex flex-col gap-8 items-center h-full">
             <h2 className="font-bold text-4xl">Login</h2>
             <form
               className="flex flex-col items-end gap-4 w-full"

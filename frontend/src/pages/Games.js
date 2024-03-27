@@ -8,7 +8,7 @@ const Games = () => {
   const navigate = useNavigate();
   return (
     <div className="catalogue">
-      <div className="game-container w-full min-h-[100vh] bg-stone-950 pt-6 md:pt-20">
+      <div className="game-container w-full min-h-[100vh] bg-stone-950 pt-12 md:pt-20">
         <div className="inner-container-1 m-10">
           <h2 className="font-bold text-4xl text-stone-100">Game Catalogue</h2>
           <p className="text-stone-100 mt-2">
@@ -25,7 +25,7 @@ const Games = () => {
                 key={game._id}
                 className="bg-stone-800 w-full p-4 flex gap-8 items-center justify-center rounded-xl"
               >
-                <div className="image-container w-28 h-full rounded-lg">
+                <div className="image-container hidden md:flex w-28 h-full rounded-lg">
                   <img
                     src={game?.imageUrl}
                     className="h-full w-full object-cover rounded-lg"
@@ -37,12 +37,12 @@ const Games = () => {
                     <p className="text-stone-100 font-bold text-2xl overflow-hidden text-ellipsis whitespace-wrap">
                       {game?.name}
                     </p>
-                    <p className="text-stone-100">
+                    <p className="text-stone-100 leading-[3rem]">
                       Available on:
-                      <span className="border p-2 rounded-lg border-amber-500 mx-2">
+                      <span className="">
                         {game.gamePlatform &&
                           game.gamePlatform.map((platform) => (
-                            <span className="border p-2 rounded-lg border-amber-500 mx-2">
+                            <span id={platform.index} className="border p-2 rounded-lg border-amber-500 mx-2">
                               {platform}
                             </span>
                           ))}

@@ -34,7 +34,7 @@ const Review = ({ reviews, reviewLoading, reviewError }) => {
               </div>
 
               <div className="rating mt-6 flex items-center gap-2 ml-auto">
-                <p className="text-stone-100 font-bold text-md">Ratings:</p>
+                <p className="text-stone-100 font-bold text-md hidden md:inline">Ratings:</p>
                 <p className="item-info text-sm text-amber-500 flex pt-1 pb-2">
                   {[...Array(review.rating)].map((_, index) => (
                     <IoMdStar key={index} size={20} />
