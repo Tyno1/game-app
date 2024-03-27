@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   const login = ({ email, password }) => {
     return new Promise((resolve, reject) => {
       axios
-        .post("http://localhost:3000/users/login", {
+        .post("https://game-app-1.onrender.com/users/login", {
           email,
           password,
         })
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
   const register = (data) => {
     return new Promise((resolve, reject) => {
       axios
-        .post("http://localhost:3000/users/signup", data)
+        .post("https://game-app-1.onrender.com/users/signup", data)
         .then((res) => {
           resolve(res);
           setUser(res.data);
@@ -68,7 +68,7 @@ export const AuthProvider = ({ children }) => {
     // console.log(defaultUserType);
     return new Promise((resolve, reject) => {
       axios
-        .get("http://localhost:3000/userTypes/all")
+        .get("https://game-app-1.onrender.com/userTypes/all")
         .then((res) => {
           resolve(res);
           setDefaultUserType(
