@@ -113,7 +113,8 @@ const GameUpload = () => {
             <option value="PC">PC</option>
             <option value="PS 5">PS5</option>
             <option value="PS">PS4</option>
-            <option value="xbox">Xbox</option>s
+            <option value="xbox">Xbox</option>
+            <option value="Mobile">Xbox</option>
           </select>
         </div>
         <button className="py-4 px-8 bg-amber-500 rounded-xl text-black font-medium">Upload Game</button>
